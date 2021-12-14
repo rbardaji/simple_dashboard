@@ -42,3 +42,8 @@ main .card {
     display: block;
     font-size: 0.75rem
 }
+
+/* Remove default bullets */
+ul, #myUL {
+    list-style-type: none;
+}

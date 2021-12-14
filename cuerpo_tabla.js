@@ -11,7 +11,7 @@
 // Ahora dibujamos la tabla
 const $cuerpoTabla = document.querySelector("#cuerpoTabla");
 
-request.open('GET', 'http://DESKTOP-OMHH7GT:5000/metadata/ANTARES', true)
+request.open('GET', 'http://localhost:8050/metadata/ANTARES', true)
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
