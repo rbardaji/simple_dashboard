@@ -14,6 +14,7 @@ var request_parameter_pie_6D = new XMLHttpRequest()
 var request_parameter_pie_10D = new XMLHttpRequest()
 var request_parameter_pie_15D = new XMLHttpRequest()
 var request_parameter_pie_M = new XMLHttpRequest()
+var request_map = new XMLHttpRequest()
 
 request_platform_aviability.open('GET', 'http://localhost:8050/fig/platform_availability/ANTARES', true)
 request_platform_aviability.onload = function () {
@@ -184,3 +185,15 @@ request_parameter_pie_R.onload = function () {
     }
 }
 request_parameter_pie_R.send()
+
+request_map.open(
+    'GET',
+    'http://localhost:8050/fig/map?search=%7B%22platform_code%22%3A%22ANTARES%22%7D', true)
+request_map.onload = function () {
+    if (request.status >= 200 && request.status < 400) {
+        console.log('call Map');
+    } else {
+        console.log('error in call Map')
+    }
+}
+request_map.send()
